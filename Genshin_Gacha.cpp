@@ -60,28 +60,6 @@ pair<list<int>, int> puller(int pickup_pull){
     return {timelines,five_star};
 }
 
-list<int> certain_counter(list<int> check_list){
-    int ititial=0;
-    int interval = 10;
-    int counter =0;
-    list<int> resu;
-    for(int i;i<10;i++){
-        for(int value:check_list){
-            if(value>ititial){
-                if(value<ititial+interval){
-                    counter+=1;
-                }
-            }
-        }
-        resu.push_back(counter);
-        counter=0;
-        ititial+=interval;
-    }
-    return resu;
-
-
-}
-
 int main(){
     cout << "How many times do you pull?" << endl;
     int pick_times; cin >> pick_times;
@@ -98,7 +76,6 @@ int main(){
         re_five+=five_star;
     }
     for(int value:results){
-        //cout << value << ",";
         sum+=value;
     }
   
